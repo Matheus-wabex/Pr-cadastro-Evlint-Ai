@@ -1,0 +1,151 @@
+:root {
+  color-scheme: dark;
+  --cor-azul-principal: #2157ff;
+  --cor-azul-secundario: #087dff;
+  --cor-ciano-detalhe: #39d7ff;
+  --cor-fundo-escuro: #050812;
+  --cor-painel-escuro: rgba(5, 9, 24, 0.82);
+  --cor-texto-principal: #f8f9ff;
+  --cor-texto-secundario: #b2bedc;
+  --cor-texto-suave: #7885a3;
+  --cor-borda: rgba(163, 184, 230, 0.2);
+  --largura-conteudo: 1108px;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--cor-fundo-escuro);
+}
+
+body {
+  position: relative;
+  display: flow-root;
+  isolation: isolate;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-principal);
+}
+
+.video-fundo {
+  position: fixed;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.sobreposicao-fundo {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(3, 5, 12, 0.22) 0%, rgba(3, 5, 12, 0.06) 52%, rgba(3, 5, 12, 0.12) 100%),
+    linear-gradient(0deg, rgba(3, 5, 12, 0.12), transparent 35%, transparent 78%, rgba(3, 5, 12, 0.08));
+}
+
+.cabecalho-site {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(var(--largura-conteudo), calc(100% - 64px));
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px auto 0;
+}
+
+.logo-site {
+  display: inline-flex;
+  width: 190px;
+  height: 80px;
+  flex: 0 0 auto;
+  margin-left: 26px;
+}
+
+.logo-site img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.etiqueta-lancamento {
+  display: inline-flex;
+  min-width: 198px;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 17px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  background: rgba(9, 20, 51, 0.12);
+  color: #c5d4fa;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cor-ciano-detalhe);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .cabecalho-site {
+    width: calc(100% - 36px);
+    min-height: 40px;
+    margin-top: 20px;
+  }
+
+  .logo-site {
+    width: 150px;
+    height: 50px;
+    margin-left: 0;
+  }
+
+  .etiqueta-lancamento {
+    min-width: 0;
+    min-height: 32px;
+    padding: 0 9px;
+    font-size: 8px;
+    letter-spacing: 0.9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

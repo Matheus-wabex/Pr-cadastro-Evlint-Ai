@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050812">
+    <meta name="description" content="Faça seu pré-cadastro para receber uma demonstração gratuita da EVILINT-AI no lançamento.">
+    <title>Pré-cadastro — EVILINT-AI</title>
+    <link rel="stylesheet" href="src/estilos/global.css">
+    <link rel="stylesheet" href="src/paginas/pre-cadastro/pre-cadastro.css">
+    <script src="src/paginas/pre-cadastro/pre-cadastro.js" defer></script>
+    <link rel="favicon" href="src/imagens/Logotipo azul em forma de espiral">
+  </head>
+  <body>
+    <video class="video-fundo" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+      <source src="src/videos/loop_fondo_azul_corregido.mp4" type="video/mp4">
+    </video>
+    <div class="sobreposicao-fundo" aria-hidden="true"></div>
+
+    <header class="cabecalho-site">
+      <a class="logo-site" href="index.html" aria-label="EVLINT AI — início">
+        <img src="src/imagens/Logo futurista EVLINT AI em azul e branco.png" alt="EVLINT AI">
+      </a>
+      <span class="etiqueta-lancamento">LANÇAMENTO EM BREVE</span>
+    </header>
+
+    <main class="conteudo-principal">
+      <section class="secao-apresentacao" aria-labelledby="titulo-principal">
+        <div class="conteudo-apresentacao">
+          <h1 class="titulo-principal" id="titulo-principal">Sua IA de captação de clientes chega em breve.</h1>
+          <p class="texto-apresentacao">Faça seu pré-cadastro agora e, no lançamento, receba a demonstração gratuita da EVILINT-AI.</p>
+          <ul class="lista-beneficios">
+            <li><span class="icone-beneficio" aria-hidden="true">✓</span><span>Pré-cadastro gratuito, sem compromisso</span></li>
+            <li><span class="icone-beneficio" aria-hidden="true">✓</span><span>Demonstração gratuita para quem se cadastrar</span></li>
+            <li><span class="icone-beneficio" aria-hidden="true">✓</span><span>Aviso assim que a plataforma abrir</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="secao-formulario" aria-labelledby="titulo-formulario">
+        <form class="cartao-formulario" id="formulario-pre-cadastro" novalidate>
+          <h2 class="titulo-formulario" id="titulo-formulario">Faça seu pré-cadastro</h2>
+          <p class="descricao-formulario">Preencha os dados abaixo para garantir sua demonstração gratuita.</p>
+
+          <div class="grupo-campo">
+            <label class="rotulo-campo" for="nome">Nome</label>
+            <input class="campo-formulario" id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" maxlength="120" required aria-describedby="erro-nome">
+            <span class="erro-campo" id="erro-nome"></span>
+          </div>
+
+          <div class="grupo-campo">
+            <label class="rotulo-campo" for="email">E-mail</label>
+            <input class="campo-formulario" id="email" name="email" type="email" placeholder="voce@empresa.com.br" autocomplete="email" maxlength="254" required aria-describedby="erro-email">
+            <span class="erro-campo" id="erro-email"></span>
+          </div>
+
+          <div class="grupo-campo">
+            <label class="rotulo-campo" for="whatsapp">WhatsApp</label>
+            <input class="campo-formulario" id="whatsapp" name="whatsapp" type="tel" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="tel" maxlength="19" required aria-describedby="erro-whatsapp">
+            <span class="erro-campo" id="erro-whatsapp"></span>
+          </div>
+
+          <button class="btn-form" id="botao-envio" type="submit" >Quero minha demonstração gratuita</button>
+          <p class="mensagem-formulario" id="mensagem-formulario" role="status" aria-live="polite"></p>
+          <p class="nota-formulario">Você será avisado no dia do lançamento.</p>
+          <p class="nota-formulario">Para maior segurança, por favor, escreve de novo seus dados no whatsapp.</p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
